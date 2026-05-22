@@ -1,6 +1,6 @@
 # 📌 AI-Supported Fake REST API Test Automation Project
 
-## 🧪 Proje Açıklaması
+##  Proje Açıklaması
 
 Bu proje, **Java + Maven + Rest Assured + TestNG/JUnit** kullanılarak geliştirilmiş bir **API Test Otomasyon Framework’üdür**.
 
@@ -31,13 +31,13 @@ Bu yaklaşım, test mühendisliği sürecini hızlandırmak ve daha kapsamlı bi
 
 ---
 
-## 🏦 Kullanılan API
+## Kullanılan API
 
 Bu proje aşağıdaki mock bankacılık API üzerinde çalışmaktadır:
 
 👉 https://api.mockbank.io/swagger-ui.html
 
-### 📌 API Özelliği
+###  API Özelliği
 
 Bu API:
 
@@ -79,7 +79,7 @@ Bu yapı sayesinde:
 
 ---
 
-## 🚀 Test Senaryoları
+## Test Senaryoları
 
 ### 👤 Customer Service (Müşteri Servisi)
 
@@ -127,7 +127,7 @@ Bu yapı sayesinde:
 
 ---
 
-## 🧠 Proje Yaklaşımı (Framework Mantığı)
+## Proje Yaklaşımı (Framework Mantığı)
 
 Bu proje sadece test yazımı değil, aynı zamanda:
 
