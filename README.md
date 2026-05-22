@@ -1,4 +1,4 @@
-# 📌 Fake REST API Test Automation Project
+# 📌 AI-Supported Fake REST API Test Automation Project
 
 ## 🧪 Proje Açıklaması
 
@@ -16,6 +16,21 @@ Bu kapsamda sistem:
 
 ---
 
+## 🤖 Yapay Zeka Destekli Geliştirme Yaklaşımı
+
+Bu projede test senaryolarının tasarlanması ve geliştirilmesi sürecinde **yapay zeka destekli yazılım geliştirme yaklaşımı** kullanılmıştır.
+
+Bu kapsamda:
+
+- Test senaryolarının tasarımında API davranış analizi için AI destekli fikir üretimi kullanılmıştır
+- Assertion (doğrulama) noktalarının belirlenmesinde test kapsamı genişletilmiştir
+- Edge-case (negatif senaryolar) analizi yapılırken yapay zeka destekli önerilerden faydalanılmıştır
+- REST API test yazımı ve framework mimarisi best practice’leri için rehberlik alınmıştır
+
+Bu yaklaşım, test mühendisliği sürecini hızlandırmak ve daha kapsamlı bir test kapsama alanı oluşturmak için kullanılmıştır.
+
+---
+
 ## 🏦 Kullanılan API
 
 Bu proje aşağıdaki mock bankacılık API üzerinde çalışmaktadır:
@@ -25,6 +40,7 @@ Bu proje aşağıdaki mock bankacılık API üzerinde çalışmaktadır:
 ### 📌 API Özelliği
 
 Bu API:
+
 - Gerçek bir production database’e bağlı değildir
 - Test ve demo amaçlı çalışır
 - Bazı POST işlemleri veri tabanına kalıcı kayıt yapmaz
@@ -56,6 +72,7 @@ Proje, yeniden kullanılabilir ve ölçeklenebilir bir test otomasyon framework 
 - **utils (opsiyonel):** Test data üretimi ve yardımcı sınıflar
 
 Bu yapı sayesinde:
+
 - Kod tekrarları azaltılmıştır
 - Testler merkezi şekilde yönetilebilir hale getirilmiştir
 - Framework büyümeye uygun hale getirilmiştir
@@ -66,68 +83,47 @@ Bu yapı sayesinde:
 
 ### 👤 Customer Service (Müşteri Servisi)
 
-Bu test grubu, sistemdeki müşteri listesini doğrular.
-
 ✔ Müşteri listesi başarıyla çekiliyor mu?  
-✔ API doğru HTTP status code (200) dönüyor mu?  
-✔ Response süresi kabul edilebilir mi?  
-✔ Dönen müşteri verisi boş veya hatalı mı?
-
-📌 Amaç:
-Müşteri servisinin stabil çalıştığını ve veri döndüğünü doğrulamak.
+✔ HTTP status code doğru mu (200)?  
+✔ Response time kabul edilebilir mi?  
+✔ Veri bütünlüğü kontrol ediliyor mu?
 
 ---
 
 ### 🏦 Account Service (Hesap Servisi)
 
-Bu testler, banka hesap bilgilerinin doğruluğunu kontrol eder.
-
-✔ Hesap listesi başarılı şekilde geliyor mu?  
+✔ Hesap listesi doğru şekilde geliyor mu?  
 ✔ Account number alanı mevcut mu?  
-✔ Balance (bakiye) bilgisi doğru formatta mı?  
+✔ Balance bilgisi doğru formatta mı?  
 ✔ API response başarılı mı?
-
-📌 Amaç:
-Finansal verilerin API üzerinden doğru ve tutarlı şekilde döndüğünü doğrulamak.
 
 ---
 
 ### 💸 Transaction Service (İşlem Servisi)
 
-Bu testler finansal işlem kayıtlarını doğrular.
-
 ✔ Transaction listesi geliyor mu?  
-✔ Amount (tutar) bilgisi mevcut mu?  
-✔ Transaction type (debit/credit) doğru mu?  
+✔ Amount bilgisi doğru mu?  
+✔ Transaction type doğru mu?  
 ✔ Response time performans sınırında mı?
-
-📌 Amaç:
-Bankacılık işlemlerinin API üzerinden doğru şekilde sunulduğunu test etmek.
 
 ---
 
 ### ➕ Create Customer (POST Test Senaryosu)
 
-Bu test senaryosu, API’ye veri gönderme işlemini simüle eder.
-
-✔ JSON request body gönderilir  
-✔ POST request doğru şekilde çalışıyor mu kontrol edilir  
+✔ JSON request body gönderimi test edilir  
+✔ POST request doğru çalışıyor mu kontrol edilir  
 ✔ Status code doğrulanır  
-✔ Request-response akışı test edilir
+✔ API request-response akışı test edilir  
 
-📌 Önemli Not:
-Bu API mock olduğu için gönderilen veriler **kalıcı olarak kaydedilmez**.  
-Bu testin amacı veri oluşturmak değil, **POST request mekanizmasını test etmektir.**
+📌 Not: API mock olduğu için veriler kalıcı değildir.
 
 ---
 
 ## 📊 Doğrulama (Assertion) Mantığı
 
-Bu projede üç temel doğrulama yapılır:
-
-- **Status Code Validation:** API başarılı çalışıyor mu?
-- **Response Body Validation:** Dönen veri doğru mu?
-- **Response Time Validation:** API performansı yeterli mi?
+- Status Code Validation → API doğru çalışıyor mu?
+- Response Body Validation → Veri doğru mu geliyor?
+- Response Time Validation → Performans uygun mu?
 
 ---
 
@@ -139,15 +135,13 @@ Bu proje sadece test yazımı değil, aynı zamanda:
 ✔ Reusable (tekrar kullanılabilir) yapı  
 ✔ Clean code prensipleri  
 ✔ Regression test mantığı  
-✔ API validation stratejisi
+✔ API validation stratejisi  
 
 içermektedir.
 
 ---
 
 ## 🧪 Testleri Çalıştırma
-
-Proje Maven üzerinden çalıştırılır:
 
 ```bash
 mvn clean test
