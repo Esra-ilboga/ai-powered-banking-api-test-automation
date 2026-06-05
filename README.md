@@ -141,7 +141,3 @@ içermektedir.
 
 ---
 
-## 🧪 Testleri Çalıştırma
-
-```bash
-mvn clean test
